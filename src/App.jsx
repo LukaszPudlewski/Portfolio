@@ -4,6 +4,8 @@ import ProjectList from "./components/projectList/projectList";
 import Contact from "./components/contact/Contact";
 import Toggle from "./components/toggle/Toggle";
 import ToggleLang from "./components/toggleLang/ToggleLang";
+import Favicon from "react-favicon";
+import Smiley from './img/smile.png'
 import { useContext, useState } from "react";
 import { LangContext, ThemeContext, ThemeProvider } from "./context";
 
@@ -19,6 +21,7 @@ const App = () => {
     }}
 
   >
+      <Favicon url={Smiley}></Favicon>
       <ToggleLang/>
       <Toggle />
       <Intro/>

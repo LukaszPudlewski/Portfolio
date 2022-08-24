@@ -4,7 +4,7 @@ import Phone from '../../img/phone.png'
 import Email from '../../img/email.png'
 import Address from '../../img/address.png'
 import emailjs from '@emailjs/browser';
-import { ThemeContext } from '../../context'
+import { LangContext, ThemeContext } from '../../context'
 
 const Contact = () => {
     const formRef = useRef();
@@ -22,21 +22,23 @@ const Contact = () => {
         });
     }
     const theme = useContext(ThemeContext);
+    const lang = useContext(LangContext);
     const darkMode = theme.state.darkMode;
+    const polish = lang.state.polish;
     return <div className='c'
       style={{
         backgroundColor: darkMode ? "#0e2934" : "#f0f8ff",
         color: darkMode && "white",
       }}
     >
-        <div style={{backgroundColor: darkMode && "#103341"}} className="c-bg"></div>
+        <div style={{backgroundColor: darkMode && "#184110"}} className="c-bg"></div>
         <div className="c-wrapper">
             <div className="c-left">
-                <h1 className="c-title">Contact</h1>
+                <h1 className="c-title">{polish ? 'Kontakt' : 'Contact'}</h1>
                 <div className="c-info">
                  <div className="c-info-item">
                     <img src={Phone} alt="phoneicon" className="c-icon" />
-                    <a href="tel:07894098033">07894098033</a>
+                    <a href={polish ? 'tel:+447894098033' : "tel:07894098033"}>{polish ? '+447894098033' : '07894098033'}</a>
                  </div>
                  <div className="c-info-item">
                     <img src={Email} alt="emailicon" className="c-icon" />
@@ -50,14 +52,14 @@ const Contact = () => {
             </div>
             <div className="c-right">
                     <p className="c-desc">
-                        Contact Form
+                        {polish ? 'Formularz Kontaktowy' : 'Contact Form'}
                     </p>
                     <form ref={formRef} onSubmit={handleSubmit}>
-                        <input style={{backgroundColor: darkMode && "#18475a"}} type="text" placeholder="Name" name="user_name"/>
-                        <input style={{backgroundColor: darkMode && "#18475a"}} type="text" placeholder="Subject" name="user_subject"/>
+                        <input style={{backgroundColor: darkMode && "#18475a"}} type="text" placeholder={polish ? 'Imię' : "Name"} name="user_name"/>
+                        <input style={{backgroundColor: darkMode && "#18475a"}} type="text" placeholder={polish ? 'Temat' : "Subject"} name="user_subject"/>
                         <input style={{backgroundColor: darkMode && "#18475a"}} type="text" placeholder="Email" name="user_email"/>
-                        <textarea style={{backgroundColor: darkMode && "#18475a"}} rows="5" placeholder='Message' name='message'/>
-                        <button style={{backgroundColor: darkMode && "#154603"}}>Submit</button>
+                        <textarea style={{backgroundColor: darkMode && "#18475a"}} rows="5" placeholder={polish ? 'Wiadomość' : "Message"} name='message'/>
+                        <button style={{backgroundColor: darkMode && "#154603"}}>{polish ? 'Wyślij' : 'Submit'}</button>
                         {done && " Message sent."}
                     </form>
             </div>

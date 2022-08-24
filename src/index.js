@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { ThemeProvider } from './context';
+import { LangProvider, ThemeProvider } from './context';
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
-      <App />
+      <LangProvider>
+        <App />
+      </LangProvider>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')

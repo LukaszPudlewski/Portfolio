@@ -20,3 +20,24 @@ export const ThemeProvider = (props) => {
     <ThemeContext.Provider value={{state, dispatch}}>{props.children}</ThemeContext.Provider>
   );
 };
+
+export const LangContext = createContext();
+
+const INITIAL_STATE_LANG = { polish: false };
+
+const langReducer = (state, action) => {
+  switch (action.type) {
+    case "TOGGLE":
+      return { polish: !state.polish };
+    default:
+      return state;
+  }
+};
+
+export const LangProvider = (props) => {
+  const [state, dispatch] = useReducer(langReducer, INITIAL_STATE_LANG);
+
+  return (
+    <LangContext.Provider value={{state, dispatch}}>{props.children}</LangContext.Provider>
+  );
+};

@@ -1,11 +1,11 @@
-.t {
+.tl {
     width: 60px;
     height: 23px;
     border-radius: 20px;
     border: 1px solid rgb(131, 126, 126);
     background-color: rgb(253, 253, 253);
     position: fixed;
-    top: 15px;
+    top: 60px;
     left: 20px;
     z-index: 10;
     display: flex;
@@ -13,12 +13,12 @@
     justify-content: space-around;
 }
 
-.t-icon {
+.tl-icon {
     width: 20px;
     height: 20px;
 }
 
-.t-button {
+.tl-button {
     width: 32px;
     height: 25px;
     border-radius: 50%;

@@ -1,12 +1,6 @@
 import React, { useContext } from 'react'
 import { LangContext, ThemeContext } from '../../context';
 import "./about.css"
-import C from '../../img/c.png'
-import Fullstack from '../../img/fullstack.png'
-import Java from '../../img/java.png'
-import Jquery from '../../img/jquery.png'
-import Php from '../../img/php.png'
-import Python from '../../img/python.png'
 
 const About = () => {
   const theme = useContext(ThemeContext);

@@ -3,6 +3,7 @@ import './contact.css'
 import Phone from '../../img/phone.png'
 import Email from '../../img/email.png'
 import Address from '../../img/address.png'
+import Github from '../../img/github.png'
 import emailjs from '@emailjs/browser';
 import { LangContext, ThemeContext } from '../../context'
 
@@ -47,6 +48,10 @@ const Contact = () => {
                  <div className="c-info-item">
                     <img src={Address} alt="addressicon" className="c-icon" />
                     Telford, UK
+                 </div>
+                 <div className="c-info-item">
+                    <img src={Github} alt="githubicon" className="c-icon" />
+                    <a href="https://github.com/LukaszPudlewski">github</a>
                  </div>
                 </div>
             </div>

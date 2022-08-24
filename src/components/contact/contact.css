@@ -6,9 +6,9 @@
 
 .c-bg {
    margin-left: 100px;
-   margin-top: 440px;
+   margin-top: 480px;
    width: 250px;
-   height: 30%;
+   height: 25%;
    background-color: #b8f5b6;
    position: absolute;
    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);

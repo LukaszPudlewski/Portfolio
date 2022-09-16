@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import "./intro.css"
-import Me from "../../img/me.png"
+import Me from "../../img/me1.png"
 import { LangContext, ThemeContext } from '../../context';
 
 const Intro = () => {
